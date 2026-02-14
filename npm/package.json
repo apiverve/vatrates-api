@@ -1,0 +1,48 @@
+{
+  "name": "@apiverve/vatrates",
+  "version": "1.1.13",
+  "description": "VAT Rates provides current and historical Value Added Tax rates for EU and non-EU countries. Includes standard, reduced, and special rates with support for regional exceptions.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/vatrates-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": {
+    "name": "APIVerve",
+    "email": "hello@apiverve.com",
+    "url": "https://apiverve.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/vatrates-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/vatrates?utm_source=npm&utm_medium=homepage",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
