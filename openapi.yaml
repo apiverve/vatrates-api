@@ -1,0 +1,94 @@
+openapi: 3.0.4
+info:
+  title: VAT Rates
+  description: >-
+    VAT Rates provides current and historical Value Added Tax rates for EU and
+    non-EU countries. Includes standard, reduced, and special rates with support
+    for regional exceptions.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/vatrates:
+    get:
+      summary: Get VAT Rates for Country
+      description: >-
+        Returns VAT rates for a country. Optionally specify a date for
+        historical rates or a postcode for regional exceptions.
+      operationId: vatrates
+      parameters:
+        - name: country
+          in: query
+          schema:
+            type: string
+          required: true
+          description: ISO 2-letter country code (e.g., DE, FR, ES)
+          example: DE
+        - name: date
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Look up rate effective on this date (YYYY-MM-DD). Defaults to today.
+          example: '2020-07-01'
+        - name: postcode
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Check for regional exceptions (e.g., Canary Islands, Ceuta)
+          example: '35001'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  country: DE
+                  countryName: Germany
+                  currency: EUR
+                  effectiveFrom: '2021-01-01'
+                  rates:
+                    standard: 19
+                    reduced: 7
+                    reduced2: null
+                    superReduced: null
+                    parking: null
+                  exception: null
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
