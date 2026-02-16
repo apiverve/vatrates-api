@@ -44,7 +44,11 @@ from apiverve_vatrates.apiClient import VatratesAPIClient
 # Initialize the client with your APIVerve API key
 api = VatratesAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "DE", "date": "2020-07-01", "postcode": "35001" }
+query = {
+    "country": "DE",
+    "date": "2020-07-01",
+    "postcode": "35001"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "country": "DE", "date": "2020-07-01", "postcode": "35001" }
+query = {
+    "country": "DE",
+    "date": "2020-07-01",
+    "postcode": "35001"
+}
 ```
 
 ###### Simple Request
@@ -131,7 +139,11 @@ from apiverve_vatrates.apiClient import VatratesAPIClient, VatratesAPIClientErro
 
 api = VatratesAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "DE", "date": "2020-07-01", "postcode": "35001" }
+query = {
+    "country": "DE",
+    "date": "2020-07-01",
+    "postcode": "35001"
+}
 
 try:
     result = api.execute(query)
@@ -152,7 +164,11 @@ from apiverve_vatrates.apiClient import VatratesAPIClient, VatratesAPIClientErro
 
 api = VatratesAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "DE", "date": "2020-07-01", "postcode": "35001" }
+query = {
+    "country": "DE",
+    "date": "2020-07-01",
+    "postcode": "35001"
+}
 
 try:
     result = api.execute(query)
@@ -186,7 +202,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_vatrates.apiClient import VatratesAPIClient, VatratesAPIClientError
 
-query = { "country": "DE", "date": "2020-07-01", "postcode": "35001" }
+query = {
+    "country": "DE",
+    "date": "2020-07-01",
+    "postcode": "35001"
+}
 
 # Using context manager ensures proper cleanup
 with VatratesAPIClient("[YOUR_API_KEY]") as api:
@@ -212,7 +232,11 @@ from apiverve_vatrates.apiClient import VatratesAPIClient
 # Enable debug mode
 api = VatratesAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "country": "DE", "date": "2020-07-01", "postcode": "35001" }
+query = {
+    "country": "DE",
+    "date": "2020-07-01",
+    "postcode": "35001"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -227,8 +251,13 @@ from apiverve_vatrates.apiClient import VatratesAPIClient
 
 api = VatratesAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "country": "DE",
+    "date": "2020-07-01",
+    "postcode": "35001"
+}
+
 try:
-    query = { "country": "DE", "date": "2020-07-01", "postcode": "35001" }
     result = api.execute(query)
     print(result)
 finally:
