@@ -7,7 +7,7 @@ VAT Rates provides current and historical Value Added Tax rates for EU and non-E
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/vatrates.svg)](https://www.npmjs.com/package/@apiverve/vatrates)
 
-This is a Javascript Wrapper for the [VAT Rates API](https://apiverve.com/marketplace/vatrates?utm_source=npm&utm_medium=readme)
+This is a Javascript Wrapper for the [VAT Rates API](https://vatrates.apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
 
