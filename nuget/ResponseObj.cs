@@ -25,6 +25,9 @@ namespace APIVerve.API.VATRates
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,7 +42,7 @@ namespace APIVerve.API.VATRates
         public string Currency { get; set; }
 
         [JsonProperty("effectiveFrom")]
-        public DateTimeOffset EffectiveFrom { get; set; }
+        public DateTimeOffset? EffectiveFrom { get; set; }
 
         [JsonProperty("rates")]
         public Rates Rates { get; set; }
@@ -51,10 +54,10 @@ namespace APIVerve.API.VATRates
     public partial class Rates
     {
         [JsonProperty("standard")]
-        public long Standard { get; set; }
+        public long? Standard { get; set; }
 
         [JsonProperty("reduced")]
-        public long Reduced { get; set; }
+        public long? Reduced { get; set; }
 
         [JsonProperty("reduced2")]
         public object Reduced2 { get; set; }
@@ -64,5 +67,17 @@ namespace APIVerve.API.VATRates
 
         [JsonProperty("parking")]
         public object Parking { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
