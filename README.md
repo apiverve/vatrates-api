@@ -1,13 +1,13 @@
-# [VAT Rates API](https://vatrates.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [VAT Rates API](https://apiverve.com/marketplace/vatrates?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-VAT Rates provides current and historical Value Added Tax rates for EU and non-EU countries. Includes standard, reduced, and special rates with support for regional exceptions.
+VAT Rates is a European VAT rates API that returns current Value Added Tax rates for EU and non-EU countries, with historical rates by date on paid plans. Includes standard, reduced, and special rates with support for regional exceptions.
 
 The VAT Rates API provides a simple, reliable way to integrate vat rates functionality into your applications. Built for developers who need production-ready vat rates capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://vatrates.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/vatrates?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://vatrates.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/vatrates?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/vatrates-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [VAT Rates API](https://vatrates.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [VAT Rates API](https://apiverve.com/marketplace/vatrates?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/vatrates](https://docs.apiverve.com/ref/vatrates)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,39 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the VAT Rates API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "country": "DE",
+    "countryName": "Germany",
+    "currency": "EUR",
+    "effectiveFrom": "2021-01-01",
+    "rates": {
+      "standard": 19,
+      "reduced": 7,
+      "reduced2": null,
+      "superReduced": null,
+      "parking": null
+    },
+    "exception": null
+  }
 }
 ```
 
@@ -203,7 +231,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [VAT Rates API](https://vatrates.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [VAT Rates API](https://apiverve.com/marketplace/vatrates?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: VAT Rates
   description: >-
-    VAT Rates provides current and historical Value Added Tax rates for EU and
-    non-EU countries. Includes standard, reduced, and special rates with support
-    for regional exceptions.
+    VAT Rates is a European VAT rates API that returns current Value Added Tax
+    rates for EU and non-EU countries, with historical rates by date on paid
+    plans. Includes standard, reduced, and special rates with support for
+    regional exceptions.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/vatrates:
     get:
-      summary: Get VAT Rates for Country
+      summary: VAT Rates
       description: >-
         Returns VAT rates for a country. Optionally specify a date for
         historical rates or a postcode for regional exceptions.
