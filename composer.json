@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/vatrates",
+    "description": "VAT Rates is a European VAT rates API that returns current Value Added Tax rates for EU and non-EU countries, with historical rates by date on paid plans. Includes standard, reduced, and special rates with support for regional exceptions.",
+    "version": "1.2.2",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "vatrates",
+        "eu vat rates api",
+        "vat rates api",
+        "vat api",
+        "eu vat api",
+        "european vat rates api"
+    ],
+    "homepage": "https://apiverve.com/marketplace/vatrates?utm_source=php&utm_medium=referral&utm_content=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/vatrates",
+        "source": "https://github.com/apiverve/vatrates-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Vatrates\\": "php/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Vatrates\\Tests\\": "php/tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
