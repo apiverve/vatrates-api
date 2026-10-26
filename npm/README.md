@@ -1,6 +1,6 @@
 # VAT Rates API
 
-VAT Rates is a European VAT rates API that returns current Value Added Tax rates for EU and non-EU countries, with historical rates by date on paid plans. Includes standard, reduced, and special rates with support for regional exceptions.
+VAT Rates is a European VAT rates API: send a two-letter country code and get the current VAT rates for that country as JSON, with the full standard, reduced, super-reduced and parking set for EU members plus the UK, and standard rates for non-EU countries such as Switzerland and Norway. Paid plans add historical rates by date and regional exceptions by postcode.
 
 [![npm version](https://img.shields.io/npm/v/@apiverve/vatrates.svg)](https://www.npmjs.com/package/@apiverve/vatrates)
 
