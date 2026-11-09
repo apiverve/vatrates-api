@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/vatrates",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "VAT Rates is a European VAT rates API: send a two-letter country code and get the current VAT rates for that country as JSON, with the full standard, reduced, super-reduced and parking set for EU members plus the UK, and standard rates for non-EU countries such as Switzerland and Norway. Paid plans add historical rates by date and regional exceptions by postcode.",
   "main": "index.js",
   "types": "index.d.ts",
